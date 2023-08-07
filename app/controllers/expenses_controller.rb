@@ -1,9 +1,11 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    # @expenses = Expense.all
+    @expenses = current_user.expenses
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -21,7 +23,9 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = Expense.new(expense_params)
+    # @expense = Expense.new(expense_params)
+    @expense = current_user.expenses.new(expense_params)
+    @expense.name = @expense.name.titleize
 
     respond_to do |format|
       if @expense.save

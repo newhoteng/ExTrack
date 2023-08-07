@@ -1,9 +1,11 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = current_user.foods
+    # @groups = Group.all
   end
 
   # GET /groups/1 or /groups/1.json
@@ -21,17 +23,19 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
-    @group = Group.new(group_params)
+    # @group = Group.new(group_params)
+    @group = current_user.groups.new(food_params)
+    @group.name = @group.name.titleize
 
-    respond_to do |format|
-      if @group.save
-        format.html { redirect_to group_url(@group), notice: "Group was successfully created." }
-        format.json { render :show, status: :created, location: @group }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
-      end
+   
+    if @group.save
+      redirect_to group_url(@group), notice: "Group was successfully created."
+      # format.json { render :show, status: :created, location: @group }
+    else
+      render :new, status: :unprocessable_entity
+      # format.json { render json: @group.errors, status: :unprocessable_entity }
     end
+    
   end
 
   # PATCH/PUT /groups/1 or /groups/1.json

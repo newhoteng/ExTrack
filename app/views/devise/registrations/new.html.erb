@@ -1,34 +1,37 @@
+<%= stylesheet_link_tag 'registration' %>
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <% if current_user.image.attached? %>
-    <%= image_tag(current_user.image, style: "height: 50px; display: inline-block; width: 50px; border-radius: 50%; object-fit: cover")%>
-  <% else %>
-    <i class="material-icons right">account_circle</i>
-  <% end %>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
+  <div>
+    <% if resource.image.attached? %>
+      <%= image_tag(resource.image, class: 'profile-pic')%>
+    <% else %>
+      <%= image_tag("/assets/default_profile.png", class: 'profile-pic')%>
+    <% end %>
+    <label>
+      Upload picture
+      <span style="display:none;">
+        <%= f.file_field :image %>
+      </span>
+    </label>
   </div>
   
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Full Name' %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password (6 characters minimum)' %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation' %>
   </div>
 
   <div class="actions">
