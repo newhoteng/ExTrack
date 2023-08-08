@@ -24,6 +24,7 @@ input {
   box-sizing: border-box;
   border: none;
   border-top: 1px solid #e3e3e3;
+  background-color: #fff;
 }
 
 input:focus {
@@ -31,7 +32,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: #babfc6;
+  color: #b1b5b8;
 }
 
 .picture-field {
@@ -39,5 +40,17 @@ input::placeholder {
   align-items: center;
   gap: 12px;
   padding: 0.5rem 0;
-  color: #babfc6;
+  color: #b1b5b8;
+}
+
+.centered-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #b1b5b8;
+  padding: 0.5rem;
+}
+
+.centered-link:hover {
+  color: #434b54;
 }

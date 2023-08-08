@@ -10,7 +10,6 @@ nav.register {
 nav.register h2 {
   font-weight: 100;
   font-size: 1.2rem;
-  /* border: 1px solid red; */
   width: 100%;
   text-align: center;
 }
@@ -25,14 +24,11 @@ nav.register h2 {
   padding: 0 0.75rem;
   background: none;
   color: #fff;
-  /* border: 1px solid red; */
   font-weight: 100;
+  border: none;
 }
 
 .fa-arrow-left {
-  /* border: 2px solid red; */
-  /* font-weight: 100; */
-  /* font-size: 2rem; */
   position: absolute;
   top: 0;
   height: 2.5rem;

@@ -2,12 +2,15 @@
 
 .splash {
   height: 100vh;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   gap: 0.5rem;
   padding: 1.5rem 0;
+  border: 1px solid red;
+  /* align-items: center; */
 }
 
 .splash h1 {
@@ -28,7 +31,9 @@
   font-size: 1rem;
   font-weight: 200;
   display: block;
-  margin-left: -0.4rem;
+  flex-shrink: 0;
+  /* margin: 0 1rem; */
+  /* margin-left: -0.1rem; */
 }
 
 .splash .log-in {
