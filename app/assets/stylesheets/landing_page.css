@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.splash {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+}
+
+.splash h1 {
+  font-family: 'Lobster', cursive;
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.splash button {
+  width: 100%;
+  background: none;
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 200;
+  display: block;
+  margin-left: -0.4rem;
+}
+
+.splash .log-in {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.splash button:hover {
+  font-weight: 700;
+}
