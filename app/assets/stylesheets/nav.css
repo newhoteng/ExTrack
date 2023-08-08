@@ -5,6 +5,7 @@ nav.register {
   display: flex;
   align-items: center;
   height: 2.5rem;
+  position: relative;
 }
 
 nav.register h2 {

@@ -1,7 +1,9 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
+<div id="<%= dom_id group %>", class='category-card'>
+  <% if group.icon.attached? %>
+    <%= image_tag(group.icon, class: 'profile-pi')%>
+  <% else %>
+    <%= image_tag("/assets/default_icon.png", class: 'icon')%>
+  <% end %>
+  <p><%= group.name %></p>
+  <p class="total">Total</p>
 </div>

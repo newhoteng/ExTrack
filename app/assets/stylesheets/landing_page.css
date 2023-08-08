@@ -8,9 +8,7 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 0.5rem;
-  padding: 1.5rem 0;
-  border: 1px solid red;
-  /* align-items: center; */
+  padding: 1.5rem 1rem;
 }
 
 .splash h1 {

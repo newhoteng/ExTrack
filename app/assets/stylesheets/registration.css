@@ -24,7 +24,7 @@ input {
   box-sizing: border-box;
   border: none;
   border-top: 1px solid #e3e3e3;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 input:focus {
@@ -48,7 +48,7 @@ input::placeholder {
   width: 100%;
   text-align: center;
   color: #b1b5b8;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .centered-link:hover {
