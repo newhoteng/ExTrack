@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 
@@ -29,4 +30,13 @@
 
 html {
   color: #434b54;
+}
+
+a {
+  /* text-decoration: none; */
+  color: inherit;
+}
+
+body {
+  background-color: #f5f6f8;
 }

@@ -1,6 +1,9 @@
-form {
-  /* border: 1px solid blue; */
-  padding-left: 1rem;
+form.registration {
+  padding-left: 0.75rem;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
 }
 .profile-pic {
   height: 45px;
@@ -9,7 +12,6 @@ form {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #cad1e2;
-  /* background-color: #babfc6; */
 }
 
 input {
@@ -21,7 +23,7 @@ input {
   padding: 15px 15px 15px 0;
   box-sizing: border-box;
   border: none;
-  border-top: 1px solid #d0d9d4;
+  border-top: 1px solid #e3e3e3;
 }
 
 input:focus {
@@ -33,7 +35,6 @@ input::placeholder {
 }
 
 .picture-field {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   gap: 12px;
