@@ -15,10 +15,7 @@
  *= require font-awesome
  */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-
-
 
 * {
   box-sizing: border-box;
@@ -41,6 +38,8 @@ a {
 body {
   /* background-color: #f5f6f8; */
   background-color: #f0f2f1;
+
   /* max-width: 700px; */
+
   /* margin: 0 auto; */
 }

@@ -5,6 +5,7 @@ form.registration {
   border-top: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
 }
+
 .profile-pic {
   height: 45px;
   display: inline-block;
@@ -14,7 +15,16 @@ form.registration {
   border: 2px solid #cad1e2;
 }
 
-input {
+.first-input > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:not([type="submit"]):not([type="checkbox"]) {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -24,16 +34,6 @@ input {
   box-sizing: border-box;
   border: none;
   border-top: 1px solid #e3e3e3;
-  /* :not([type=checkbox]) */
-}
-
-.first-input > input {
-  border-bottom: 1px solid #e3e3e3;
-  border-top: none;
-}
-
-input:focus {
-  outline: none;
 }
 
 input::placeholder {

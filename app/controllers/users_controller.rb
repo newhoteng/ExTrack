@@ -3,6 +3,5 @@ class UsersController < ApplicationController
   # before_action :authenticate_user!
 
   # GET /groups or /groups.json
-  def landing_page
-  end
+  def landing_page; end
 end

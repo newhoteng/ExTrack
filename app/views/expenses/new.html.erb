@@ -1,5 +1,9 @@
-<h1>New expense</h1>
+<%= stylesheet_link_tag 'registration' %>
+<nav class="register">
+  <%= link_to group_expenses_path(@group), class: 'arrow-link' do %>
+    <i class="fa fa-solid fa-arrow-left"></i>
+  <% end %>
+  <h2>ADD TRANSACTION(new exp)</h2>
+</nav>
 
 <%= render "form", expense: @expense %>
-
-<br>

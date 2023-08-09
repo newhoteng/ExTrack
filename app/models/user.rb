@@ -3,11 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
+
   has_one_attached :image do |attachable|
     attachable.variant :thumb, resize_to_limit: [100, 100]
   end
-  
+
   has_many :expenses, dependent: :destroy
   has_many :groups, dependent: :destroy
 
