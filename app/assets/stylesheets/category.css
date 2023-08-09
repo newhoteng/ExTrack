@@ -40,4 +40,7 @@
 .button-outline {
   padding: 1rem;
   background-color: #5fb523;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

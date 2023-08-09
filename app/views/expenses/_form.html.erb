@@ -22,7 +22,7 @@
   </div>
 
   <div>
-    <% @groups.each do |group| %>
+    <% current_user.groups.each do |group| %>
       <%= check_box_tag "expense[group_ids][]", group.id, @expense.group_ids.include?(group.id) %>
       <%= form.label group.name %></br>
     <% end %>
