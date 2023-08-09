@@ -1,6 +1,6 @@
 class Expense < ApplicationRecord
-  has_many :groups, through: :expenses_groups
-  has_many :expenses_groups
+  has_many :categorizations
+  has_many :groups, through: :categorizations
   belongs_to :author, class_name: 'User'
 
   validates :name, presence: true

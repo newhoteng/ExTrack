@@ -3,8 +3,8 @@ class Group < ApplicationRecord
     attachable.variant :thumb, resize_to_limit: [100, 100]
   end
 
-  has_many :expenses, through: :expenses_groups
-  has_many :expenses_groups
+  has_many :categorizations
+  has_many :expenses, through: :categorizations
   belongs_to :user
 
   validates :name, presence: true
