@@ -1,10 +1,12 @@
+<%= stylesheet_link_tag 'registration' %>
+<nav class="register">
+  <h2>CATEGORIES</h2>
+</nav>
 <p style="color: green"><%= notice %></p>
-
-<h1>CATEGORIES</h1>
 
 <div id="groups", class="category-container">
   <% @groups.each do |group| %>
-    <%= link_to group, class: 'arrow-l' do %>
+    <%= link_to group_expenses_path(group) do %>
       <%= render group %>
     <% end %>
   <% end %>
@@ -13,4 +15,7 @@
 <div class='button-outline'>
   <%= link_to "ADD A NEW CATEGORY", new_group_path, class: 'add-button' %>
 </div>
+
+group_expenses_index
+link_to group
 

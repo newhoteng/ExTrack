@@ -11,12 +11,17 @@
     </div>
   <% end %>
 
-  <div>
+  <div class='first-input'>
     <%= form.text_field :name, placeholder: "Name" %>
   </div>
-
-  <div class='picture-fiel'>
-    <%= form.file_field :icon %>
+  
+  <div class='picture-field icon-field'>
+    <label>
+      Upload Icon
+      <span style="display:none;">
+        <%= form.file_field :icon %>
+      </span>
+    </label>
   </div>
 
   <div>

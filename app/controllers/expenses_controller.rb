@@ -5,16 +5,19 @@ class ExpensesController < ApplicationController
   # GET /expenses or /expenses.json
   def index
     # @expenses = Expense.all
-    @expenses = current_user.expenses
+    # @expenses = current_user.expenses
+    @expenses = Expense.where(group_id: params[:group_id])
   end
 
   # GET /expenses/1 or /expenses/1.json
   def show
   end
-
-  # GET /expenses/new
+  # http://127.0.0.1:3000/groups/2/expenses/new
+  # GET groups/group_id/expenses/new
   def new
-    @expense = Expense.new
+    @expense = Expense.new(group_ids: [params[:group_id]])
+    # @group = Group.find(params[:group_id])
+    @groups = current_user.groups
   end
 
   # GET /expenses/1/edit
@@ -23,8 +26,11 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    # @expense = Expense.new(expense_params)
-    @expense = current_user.expenses.new(expense_params)
+    @groups = current_user.groups
+    @expense = Expense.new(expense_params)
+    # @expense = current_user.expenses.new(expense_params)
+    @expense.author_id = current_user.id
+    @expense.group_ids = params[:group_ids]
     @expense.name = @expense.name.titleize
 
     respond_to do |format|

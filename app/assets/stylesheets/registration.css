@@ -14,8 +14,8 @@ form.registration {
   border: 2px solid #cad1e2;
 }
 
-input {
-  font-size: 15px;
+input:not([type=checkbox]) {
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   width: 100%;
@@ -24,7 +24,11 @@ input {
   box-sizing: border-box;
   border: none;
   border-top: 1px solid #e3e3e3;
-  /* background-color: #fff; */
+}
+
+.first-input > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
 }
 
 input:focus {
@@ -41,6 +45,11 @@ input::placeholder {
   gap: 12px;
   padding: 0.5rem 0;
   color: #b1b5b8;
+  font-size: 16px;
+}
+
+.icon-field {
+  height: 40px;
 }
 
 .centered-link {
