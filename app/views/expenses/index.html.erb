@@ -7,7 +7,10 @@
 </nav>
 
 <p style="color: green"><%= notice %></p>
-
+<div class="total-for-category">
+  <p>Total Amount</p>
+  <p><strong><%= number_to_currency(@total_amount) %></strong></p>
+</div>
 <div id="expenses", class="category-container">
   <% @expenses.each do |expense| %>
     <%= render expense %>

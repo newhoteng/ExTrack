@@ -5,7 +5,13 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = @group.expenses.where(author_id: current_user.id)
+    @expenses = @group.expenses.where(author_id: current_user.id).order('created_at Desc')
+
+    @total_amount = 0
+    # Loop through expenses and tally amounts
+    @expenses.each do |expense|
+      @total_amount += expense.amount
+    end
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -21,11 +27,11 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
+    @group = Group.find(params[:group_id])
     @expense = Expense.new(expense_params)
-    # @expense = current_user.expenses.new(expense_params)
     @expense.author_id = current_user.id
     # @expense.group_ids = params[:group_ids]
-    @expense.name = @expense.name.titleize
+    # @expense.name = @expense.name.titleize
 
     if @expense.save
       redirect_to group_expenses_path(@group), notice: 'Transaction was successfully created.' 
@@ -73,3 +79,12 @@ class ExpensesController < ApplicationController
     params.require(:expense).permit(:name, :amount, group_ids: [])
   end
 end
+
+# group_ids: []
+#   <div>
+# <%= form.hidden_field :group_id, value: @group.id %>
+# </div>
+
+# <%= form.collection_check_boxes :group_ids, Group.order(:name), :id, :name %>
+
+# <%= form_with(model: [@expense, @group], url: group_expenses_path, :html => {:class => "registration"}) do |form| %>

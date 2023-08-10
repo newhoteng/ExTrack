@@ -15,6 +15,8 @@
   height: 6.5rem;
   box-shadow: 0 2px 1px rgba(4, 9, 20, 0.03);
   width: 100%;
+  color: #87898f;
+  font-weight: 200;
 }
 
 .icon {
@@ -25,6 +27,7 @@
 
 .total {
   margin-left: auto;
+  color: #434b54;
 }
 
 .add-button {
@@ -43,4 +46,19 @@
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+
+.total-for-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 2px 1px rgba(4, 9, 20, 0.03);
+  color: #87898f;
+  font-weight: 200;
+}
+
+.total-for-category p:nth-child(2) {
+  color: #434b54;
 }
