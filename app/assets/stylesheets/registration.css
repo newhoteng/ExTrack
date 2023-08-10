@@ -74,3 +74,10 @@ input::placeholder {
 .centered-link:hover {
   color: #434b54;
 }
+
+#dropdown {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: 2.5rem;
+}
+

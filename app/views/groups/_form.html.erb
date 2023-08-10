@@ -14,14 +14,9 @@
   <div id='first-input'>
     <%= form.text_field :name, placeholder: "Name" %>
   </div>
-  
-  <div class='picture-field icon-field'>
-    <label>
-      Upload Icon
-      <span style="display:none;">
-        <%= form.file_field :icon %>
-      </span>
-    </label>
+
+  <div id="dropdown">
+    <%= form.select :icon, Group::ICONS.invert, { include_blank: true }, { required: true } %>
   </div>
 
   <div>

@@ -1,9 +1,5 @@
 <div id="<%= dom_id group %>", class='category-card'>
-  <% if group.icon.attached? %>
-    <%= image_tag(group.icon, class: 'icon')%>
-  <% else %>
-    <%= image_tag("/assets/default_icon.png", class: 'icon')%>
-  <% end %>
+  <%= content_tag :i, "", class: "fa #{group.icon} fa-10x" %>
   <p><%= group.name %></p>
   <p class="total"><strong><%= number_to_currency(group.total_amount) %></strong></p>
 </div>

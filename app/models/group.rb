@@ -1,8 +1,4 @@
 class Group < ApplicationRecord
-  has_one_attached :icon do |attachable|
-    attachable.variant :thumb, resize_to_limit: [100, 100]
-  end
-
   has_many :categorizations, dependent: :destroy
   has_many :expenses, through: :categorizations
   belongs_to :user
@@ -13,4 +9,10 @@ class Group < ApplicationRecord
   def total_amount
     expenses.sum(:amount)
   end
+
+  ICONS = {
+    'fa-car' => 'Car',
+    'fa-credit-card' => 'Credit Card',
+    'fa-solid fa-gift fa-lg' => 'Gift'
+  }.freeze
 end
