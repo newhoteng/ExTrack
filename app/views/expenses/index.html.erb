@@ -12,8 +12,12 @@
   <p><strong><%= number_to_currency(@total_amount) %></strong></p>
 </div>
 <div id="expenses", class="category-container">
-  <% @expenses.each do |expense| %>
-    <%= render expense %>
+  <% if @expenses.empty? %>
+    <p class="text-center"> <i> No transactions yet </i></p>
+  <% else %>
+    <% @expenses.each do |expense| %>
+      <%= render expense %>
+    <% end %>
   <% end %>
 </div>
 

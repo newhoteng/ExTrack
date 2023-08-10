@@ -10,7 +10,7 @@ class Expense < ApplicationRecord
 
   def update_group_total
     groups.each do |group|
-      group.group_total += expense.amount
+      group.group_total = group.group_total + self.amount
     end
   end
 end

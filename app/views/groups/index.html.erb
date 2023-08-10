@@ -6,9 +6,13 @@
 <p style="color: green"><%= notice %></p>
 
 <div id="groups", class="category-container">
-  <% @groups.each do |group| %>
-    <%= link_to group_expenses_path(group) do %>
-      <%= render group %>
+  <% if @groups.empty? %>
+    <p class="text-center"> <i> Category list is empty </i></p>
+  <% else %>
+    <% @groups.each do |group| %>
+      <%= link_to group_expenses_path(group) do %>
+        <%= render group %>
+      <% end %>
     <% end %>
   <% end %>
 </div>

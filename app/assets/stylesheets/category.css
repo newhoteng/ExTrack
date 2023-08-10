@@ -70,3 +70,9 @@
 .total-for-category p:nth-child(2) {
   color: #434b54;
 }
+
+.text-center {
+  color: #87898f;
+  font-weight: 200;
+  text-align: center;
+}
