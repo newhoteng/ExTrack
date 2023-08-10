@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[show edit update destroy]
-  before_action :set_group, only: %i[index new create]
+  before_action :set_group, only: %i[index new]
   before_action :authenticate_user!
 
   # GET /expenses or /expenses.json
@@ -24,11 +24,11 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(expense_params)
     # @expense = current_user.expenses.new(expense_params)
     @expense.author_id = current_user.id
-    @expense.group_ids = params[:group_ids]
+    # @expense.group_ids = params[:group_ids]
     @expense.name = @expense.name.titleize
 
     if @expense.save
-      redirect_to group_expenses_url(@group)
+      redirect_to group_expenses_path(@group), notice: 'Transaction was successfully created.' 
     else
       render :new, status: :unprocessable_entity
     end
@@ -70,6 +70,6 @@ class ExpensesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.require(:expense).permit(:name, :amount)
+    params.require(:expense).permit(:name, :amount, group_ids: [])
   end
 end
