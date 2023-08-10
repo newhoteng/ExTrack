@@ -4,8 +4,21 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = current_user.groups
-    # @groups = Group.all
+    @groups = Group.includes(:expenses).where(user_id: current_user.id)
+
+    # Clone user's general food list
+    groups = @general_food_list.clone
+
+    # @groups.each do |group|
+    #   group.expenses.each do |expense|
+    #   end
+    # end
+
+    # @total_amount = 0
+    # # Loop through expenses and tally amounts
+    # @expenses.each do |expense|
+    #   @total_amount += expense.amount
+    # end
   end
 
   # GET /groups/1 or /groups/1.json

@@ -3,7 +3,7 @@ class Group < ApplicationRecord
     attachable.variant :thumb, resize_to_limit: [100, 100]
   end
 
-  has_many :categorizations
+  has_many :categorizations, dependent: :destroy
   has_many :expenses, through: :categorizations
   belongs_to :user
 

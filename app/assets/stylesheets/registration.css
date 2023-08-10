@@ -1,6 +1,6 @@
 form.registration {
   padding-left: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   background-color: #fff;
   border-top: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
@@ -15,7 +15,17 @@ form.registration {
   border: 2px solid #cad1e2;
 }
 
-.first-input > input {
+#first-input > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+#second-input-exp > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+#first-input-exp > input {
   border-bottom: 1px solid #e3e3e3;
   border-top: none;
 }
