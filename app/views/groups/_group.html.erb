@@ -5,5 +5,5 @@
     <%= image_tag("/assets/default_icon.png", class: 'icon')%>
   <% end %>
   <p><%= group.name %></p>
-  <p class="total"><strong><%= number_to_currency(50) %></strong></p>
+  <p class="total"><strong><%= number_to_currency(group.total_amount) %></strong></p>
 </div>

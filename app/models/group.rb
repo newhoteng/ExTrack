@@ -9,4 +9,8 @@ class Group < ApplicationRecord
 
   validates :name, presence: true
   validates_uniqueness_of :name, scope: :user_id, message: ' already exist'
+
+  def total_amount
+    expenses.sum(:amount)
+  end
 end
