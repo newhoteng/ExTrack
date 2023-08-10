@@ -15,21 +15,6 @@ form.registration {
   border: 2px solid #cad1e2;
 }
 
-#first-input > input {
-  border-bottom: 1px solid #e3e3e3;
-  border-top: none;
-}
-
-#second-input-exp > input {
-  border-bottom: 1px solid #e3e3e3;
-  border-top: none;
-}
-
-#first-input-exp > input {
-  border-bottom: 1px solid #e3e3e3;
-  border-top: none;
-}
-
 input:focus {
   outline: none;
 }
@@ -44,6 +29,21 @@ input:not([type="submit"]):not([type="checkbox"]) {
   box-sizing: border-box;
   border: none;
   border-top: 1px solid #e3e3e3;
+}
+
+#first-input > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+#second-input-exp > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+#first-input-exp > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
 }
 
 input::placeholder {
@@ -77,7 +77,5 @@ input::placeholder {
 
 #dropdown {
   width: 100%;
-  /* border: 1px solid red; */
   height: 2.5rem;
 }
-

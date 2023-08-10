@@ -35,7 +35,7 @@ RSpec.describe 'Expense index page', type: :feature do
     end
   end
 
-  describe "clicking the back arrow" do
+  describe 'clicking the back arrow' do
     it 'redirects to root page' do
       click_link(href: root_path)
       expect(page).to have_current_path(root_path)

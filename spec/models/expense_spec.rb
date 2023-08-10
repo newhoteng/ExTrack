@@ -12,7 +12,7 @@ RSpec.describe Expense, type: :model do
   describe 'validations' do
     user = User.create(name: 'Harriet', email: 'exam@email.com', password: 'password',
                        password_confirmation: 'password')
-                   
+
     subject { Expense.new(name: 'Ball', amount: 30, author_id: user.id) }
 
     it 'name should be present' do

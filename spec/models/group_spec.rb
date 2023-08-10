@@ -12,8 +12,7 @@ RSpec.describe Group, type: :model do
   describe 'validations' do
     user = User.create(name: 'Harriet', email: 'exam@email.com', password: 'password',
                        password_confirmation: 'password')
-                   
-    created_group = Group.create(name: 'Outdoor', user_id: user.id)
+
     subject { Group.new(name: 'Sports', user_id: user.id) }
 
     it 'name should be present' do

@@ -14,12 +14,10 @@ class ExpensesController < ApplicationController
     end
   end
 
-
   # GET groups/group_id/expenses/new
   def new
     @expense = Expense.new(group_ids: [params[:group_id]])
   end
-
 
   # POST /expenses or /expenses.json
   def create
@@ -29,7 +27,7 @@ class ExpensesController < ApplicationController
     @expense.name = @expense.name.capitalize
 
     if @expense.save
-      redirect_to group_expenses_path(@group), notice: 'Transaction was successfully created.' 
+      redirect_to group_expenses_path(@group), notice: 'Transaction was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end

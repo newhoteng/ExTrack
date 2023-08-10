@@ -32,7 +32,7 @@ RSpec.describe 'Group index page', type: :feature do
     end
   end
 
-  describe "clicking on a category item" do
+  describe 'clicking on a category item' do
     it 'redirects to groups#new page' do
       click_link(href: group_expenses_path(@group))
       expect(page).to have_current_path(group_expenses_path(@group))
