@@ -24,6 +24,9 @@
 #  :open_book: ExTrack <a name="about-project"></a>
 Extrack is an expense tracking app that allows user to create new transactions associated with a category and see the money spent on each category.
 
+- [Video Presentation](https://www.loom.com/share/e9b41d8a2eaa43239da64e00eac1bd58?sid=b2932f6a-2713-4795-8e71-7db0eac7a6b4)
+
+
 ## :hammer_and_wrench: Built With <a name="built-with"></a>
 ### Tech Stack
 <details><summary>Client</summary>
@@ -52,8 +55,7 @@ Extrack is an expense tracking app that allows user to create new transactions a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :rocket: Live Demo
-- Pending
-<!-- - [Live Demo](https://recipe-app-nnpo.onrender.com) -->
+- [Live Demo](https://extrack-app.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,6 +127,7 @@ To run tests, run the following command:
 
 ## :telescope: Future Features <a name="future-features"></a>
   - Record income
+  - Add more category options
   - View monthly savings
   - Improve styling
 
@@ -144,6 +147,7 @@ If you like this project give it a star.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :pray: Acknowledgements <a name="acknowledgements"></a>
+- Thanks to Gregoire Vella for the UI/UX design.
 - Thanks to my coding partners for their support
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  # resources :expenses
-  # resources :groups
   resources :groups do
     resources :expenses
   end

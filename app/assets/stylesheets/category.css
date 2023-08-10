@@ -27,8 +27,13 @@
 .icon {
   width: 5rem;
   height: 5rem;
-  border: 1px solid #e3e3e3;
-  font-size: larger;
+  border: 2px solid #e3e3e3;
+  border: 1px solid #123763;
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #123763;
 }
 
 .total {

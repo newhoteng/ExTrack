@@ -19,10 +19,12 @@
     <%= form.text_field :amount, placeholder: 'Amount' %>
   </div>
 
-  <div>
+  <div class="checkbox-container">
     <% current_user.groups.each do |group| %>
+      <div class='eachbox'>
       <%= check_box_tag "expense[group_ids][]", group.id, @expense.group_ids.include?(group.id) %>
       <%= form.label group.name %></br>
+      </div>
     <% end %>
   </div>
 
