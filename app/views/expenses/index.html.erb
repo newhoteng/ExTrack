@@ -3,12 +3,12 @@
   <%= link_to root_path, class: 'arrow-link' do %>
     <i class="fa fa-solid fa-arrow-left"></i>
   <% end %>
-  <h2>TRANSACTIONS(exps)</h2>
+  <h2>TRANSACTIONS</h2>
 </nav>
 
 <p style="color: green"><%= notice %></p>
 
-<div id="expenses">
+<div id="expenses", class="category-container">
   <% @expenses.each do |expense| %>
     <%= render expense %>
   <% end %>
