@@ -5,7 +5,8 @@ nav.register {
   display: flex;
   align-items: center;
   height: 2.5rem;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 nav.register h2 {
@@ -45,6 +46,12 @@ header {
   color: #fff;
   border: none;
   background-color: #3778c2;
-  padding: 0.5rem;
-  font-weight: 100;
+  padding: 0 0.75rem;
+  font-weight: 200;
+  display: block;
+  width: 78px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.5rem;
 }

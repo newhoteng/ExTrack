@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[show edit update destroy]
-  before_action :set_group, only: %i[index new]
+  before_action :set_group, only: %i[index new create]
   before_action :authenticate_user!
 
   # GET /expenses or /expenses.json
@@ -27,7 +27,7 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @group = Group.find(params[:group_id])
+    # @group = Group.find(params[:group_id])
     @expense = Expense.new(expense_params)
     @expense.author_id = current_user.id
     # @expense.group_ids = params[:group_ids]
@@ -88,3 +88,7 @@ end
 # <%= form.collection_check_boxes :group_ids, Group.order(:name), :id, :name %>
 
 # <%= form_with(model: [@expense, @group], url: group_expenses_path, :html => {:class => "registration"}) do |form| %>
+
+# <% if controller_name == 'groups' && action_name == 'index' %>
+#   <%= render 'shared/header' %>
+# <% end %>
