@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
   has_many :categorizations, dependent: :destroy
-  has_many :expenses, through: :categorizations
+  has_many :expenses, through: :categorizations, dependent: :destroy
   belongs_to :user
 
   validates :name, presence: true
