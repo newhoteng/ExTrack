@@ -55,7 +55,7 @@ Extrack is an expense tracking app that allows user to create new transactions a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :rocket: Live Demo
-- [Live Demo](https://extrack-app.onrender.com)
+- [Live Demo](https://extrack.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
