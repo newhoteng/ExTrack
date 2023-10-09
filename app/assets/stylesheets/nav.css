@@ -1,0 +1,58 @@
+nav.register {
+  margin: 0;
+  background-color: #3778c2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav.register h2 {
+  font-weight: 100;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0 0.75rem;
+  background: none;
+  color: #fff;
+  font-weight: 100;
+  border: none;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  top: 0;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  padding-top: 0.6rem;
+}
+
+header {
+  background-color: #3778c2;
+}
+
+.sign-out {
+  color: #fff;
+  border: none;
+  background-color: #3778c2;
+  padding: 0 0.75rem;
+  font-weight: 200;
+  display: block;
+  width: 78px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.5rem;
+}

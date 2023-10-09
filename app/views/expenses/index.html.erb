@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag 'registration' %>
+<main>
+  <nav class="register">
+    <%= link_to root_path, class: 'arrow-link' do %>
+      <i class="fa fa-solid fa-arrow-left"></i>
+    <% end %>
+    <h2>TRANSACTIONS</h2>
+  </nav>
+
+  <p style="color: green"><%= notice %></p>
+  <div class="total-for-category">
+    <p>Total Amount</p>
+    <p><strong><%= number_to_currency(@total_amount) %></strong></p>
+  </div>
+  <div id="expenses", class="category-container">
+    <% if @expenses.empty? %>
+      <p class="text-center"> <i> No transactions yet </i></p>
+    <% else %>
+      <% @expenses.each do |expense| %>
+        <%= render expense %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class='button-outline'>
+    <%= link_to "ADD A NEW TRANSACTION", new_group_expense_path, class: 'add-button' %>
+  </div>
+</main>

@@ -1,0 +1,9 @@
+<%= stylesheet_link_tag 'registration' %>
+<nav class="register">
+  <%= link_to groups_path, class: 'arrow-link' do %>
+    <i class="fa fa-solid fa-arrow-left"></i>
+  <% end %>
+  <h2>ADD CATEGORY</h2>
+</nav>
+
+<%= render "form", group: @group %>

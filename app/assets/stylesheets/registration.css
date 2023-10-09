@@ -1,0 +1,97 @@
+form.registration {
+  padding-left: 0.75rem;
+  margin-top: 4rem;
+  background-color: #fff;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.profile-pic {
+  height: 45px;
+  display: inline-block;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #cad1e2;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* input:not([type="submit"]):not([type="checkbox"]) */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+  height: 40px;
+  padding: 15px 15px 15px 0;
+  box-sizing: border-box;
+  border: none;
+  border-top: 1px solid #e3e3e3;
+}
+
+#first-input > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+#second-input-exp > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+#first-input-exp > input {
+  border-bottom: 1px solid #e3e3e3;
+  border-top: none;
+}
+
+input::placeholder {
+  color: #b1b5b8;
+}
+
+.picture-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.5rem 0;
+  color: #b1b5b8;
+  font-size: 16px;
+}
+
+.icon-field {
+  height: 40px;
+}
+
+.centered-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #b1b5b8;
+  padding: 1rem;
+}
+
+.centered-link:hover {
+  color: #434b54;
+}
+
+#dropdown {
+  width: 100%;
+  height: 2.5rem;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  color: #b1b5b8;
+}
+
+.eachbox {
+  display: flex;
+  gap: 0.75rem;
+}

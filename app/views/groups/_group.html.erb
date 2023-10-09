@@ -1,0 +1,7 @@
+<div id="<%= dom_id group %>", class='category-card'>
+  <div class='icon'>
+    <%= content_tag :i, "", class: "fa #{group.icon}" %>
+  </div>
+  <p><%= group.name %></p>
+  <p class="total"><strong><%= number_to_currency(group.total_amount) %></strong></p>
+</div>

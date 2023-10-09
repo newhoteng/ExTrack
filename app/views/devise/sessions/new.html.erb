@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag 'registration' %>
+<nav class="register">
+  <%= link_to exTrack_path, class: 'arrow-link' do %>
+      <i class="fa fa-solid fa-arrow-left"></i>
+  <% end %>
+  <h2>LOGIN</h2>
+</nav>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "registration"}) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log In", class: 'submit' %>
+  </div>
+<% end %>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot password?", new_password_path(resource_name), class: 'centered-link' %><br />
+<% end %>
+

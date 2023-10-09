@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag 'registration' %>
+<main>
+  <nav class="register">
+    <h2>CATEGORIES</h2>
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'sign-out' %>
+  </nav>
+  <p style="color: green"><%= notice %></p>
+
+  <div id="groups", class="category-container">
+    <% if @groups.empty? %>
+      <p class="text-center"> <i> Category list is empty </i></p>
+    <% else %>
+      <% @groups.each do |group| %>
+        <%= link_to group_expenses_path(group) do %>
+          <%= render group %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class='button-outline'>
+    <%= link_to "ADD A NEW CATEGORY", new_group_path, class: 'add-button' %>
+  </div>
+</main>

@@ -1,0 +1,54 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.splash {
+  height: 100vh;
+  height: 100svh;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.splash h1 {
+  /* font-family: 'Lobster', cursive; */
+  font-family: 'Pacifico', cursive;
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.splash button {
+  width: 100%;
+  background: none;
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  flex-shrink: 0;
+}
+
+.splash .log-in {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.splash button:hover {
+  font-weight: 700;
+}
+
+@media all and (min-width: 600px) {
+  .splash {
+    border: 1px solid black;
+    border-radius: 16px;
+  }
+}
