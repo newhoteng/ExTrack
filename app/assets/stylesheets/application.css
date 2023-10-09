@@ -37,8 +37,22 @@ a {
 
 body {
   background-color: #f0f2f1;
+  /* max-width: 600px;
+  margin: 0 auto;
+  border: 3px solid red; */
 }
 
 main {
   padding-bottom: 7rem;
+  /* border: 2px solid blue; */
+  /* max-width: 600px;
+  margin: 0 auto; */
 }
+
+/* @media all and (min-width: 600px) {
+  .splash {
+    border: 1px solid black;
+    border-radius: 16px;
+  }
+} */
+
